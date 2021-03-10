@@ -1,0 +1,153 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Mar  4 12:23:28 2021
+
+
+The goal of this gitHub is to work through each exercise found on:
+https://www.practicepython.org/
+
+And to include step by step instructions to help myself and others
+to understand Python. 
+
+
+@author: evant
+"""
+
+''' Exercise 1: 
+    Create a program that asks the user to enter their name 
+    and their age. Print out a message addressed to them that 
+    tells them the year that they will turn 100 years old. '''
+
+# First step is to get the user to enter their name
+# I include an introduction and use the input() function
+
+print("Hello and welcome to this practice python exercise")
+name = input('Please enter your name: ')
+
+# To test if your input was saved use the print function to call the variable
+print("Hello " + name + "!")
+
+# Second step is to ask for the user age
+# We want to make sure that the user input is an integer 
+# With an integer we can do math to get to correct year 
+
+age = int(input('What is your age: '))
+
+#Let us call the variable and see if it saved
+print(age)
+
+# Let's also test that we do in fact have an integer
+# We will use the type() function
+print(type(age))
+
+''' The final part of this question is to tell the user when
+they will turn 100 years old using their inputed age.
+This question takes a little math. '''
+
+# We will be adding the age - 100 to the current year to get the answer
+
+# What is the current year
+
+currentYear = 2021
+
+# creating the answer variable using our formula
+# notice the str this transforms the variable into a string
+# this makes it easier to print the answer for the user
+
+yearOld = str(currentYear + (100 - age))
+
+# Finally we print the final answer for the user 
+
+print(name + " You will turn 100 in the year " + yearOld)
+
+''' We can also replace the current year using the datetime
+
+'''
+
+print()
+print()
+
+
+''' Exercise 2:
+    Ask the user for a number. Depending on whether the
+    number is even or odd, print out an appropriate 
+    message to the user. 
+    Hint: how does an even / odd number react differently
+    when divided by 2? '''
+
+# I always begin with an introduction
+print('Welcome to the Even Odd Number Calculator')
+
+#First step is to get a number from the user
+# We want this number to be an integer
+
+number = int(input('Please enter a number: '))
+
+# Second Step determine if number is Even or Odd and 
+# print a response to the user
+
+''' One of the best ways to determine if a number is Even
+or odd is to use the % which returns the remainder of 
+the divison '''
+
+# This stores the remainder of the number 
+
+modNumber = number % 2 
+
+# We will use an if loop to create this function
+
+if modNumber > 0:
+    print('Your number is Odd')
+else:
+    print('Your number is even')
+
+#this if loop uses two conditions depending on if the 
+#number input is odd or even. 
+
+print()
+print()
+
+
+'''Exercise 3:
+    Take a list, say for example this one:
+
+  a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+and write a program that prints out all the elements 
+of the list that are less than 5. '''
+
+#First some basics before we solve the problem 
+
+#Creating a list 
+
+x = [] # This is an empty list
+
+#adding to a list 
+
+x.append(3) # this adds the element 3 to our empty list
+
+#loops can be used in conjuction with lists 
+
+testList = [1, 2, 5, "Evan", "Katie", "Zelda"]
+
+for element in testList:
+    print(element)
+
+#Now let's return to the problem, first we create the list
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+# We will now create a loop to print all elements in a < 5
+
+for number in a: # number becomes our item for the function
+    if number < 5: # this is our if filter 
+        print(number)
+    else: # for all other situation we use the pass command to skip that output
+        pass
+
+# How to write this function in one line
+
+print([aa for aa in a if aa < 5])
+
+''' Exercise 4 
+
+
