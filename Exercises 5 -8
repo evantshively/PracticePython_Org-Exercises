@@ -26,3 +26,37 @@ answerList = []
 
 for both in testList:
     if both in () 
+
+'''
+Exercise 6
+
+Ask the user for a string and print out whether this string is a palindrome or not. 
+(A palindrome is a string that reads the same forwards and backwards.)
+
+String is a variable type which is made up of characters
+
+'''
+#First step is to ask the user for a word
+
+userWord = input(str("Hello, Please Enter a Word: "))  
+#Use Str function here to make sure it is a string
+
+userWord = lower(userWord)
+#This makes sure that if the user implements captials it will not matter
+
+
+#Second step we want to do is reverse the word
+
+
+wordBack = userWord[::-1]
+
+#To check the word is correctly reversed
+print(wordBack)
+
+#Finally we wish to compare the users word with the reverse to test if they are the same
+#We want to also let the user know of the results 
+
+if userWord == wordBack:
+    print("Your word is a Palindrome")
+else:
+    print("Your word is not a Palindrome, Sorry")
